@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faStar} from '@fortawesome/free-solid-svg-icons'
 
 const message = `
-  Z powodów zdrowotnych zmuszony jest odwołać konsultacje w dniu 12.11.2019 (wtorek).
+  Z powodów zdrowotnych zmuszony jestem odwołać konsultacje w dniu 12.11.2019 (wtorek).
   W przypadku konsultacji w dniu 13.11.2019 zainteresowane osoby proszę o wiadomość.
   Osoby wybierające się w kwestiach formalnych (podpisanie formularza) proszone są o dostarczenie go do sekretariatu DMCS (jutro lub w czwartek dokument podpiszę).
   Proszę o przekazanie informacji zainteresowanym osobom.
 `
 
 const ForStudents = () => (
-  <section className="page-section" id="contact">
+  <section className="page-section" id="contact" id="forStudents">
     <div className="container">
       <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">For students</h2>
       <div className="divider-custom">
