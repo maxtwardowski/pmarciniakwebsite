@@ -55,7 +55,7 @@ const Contact = () => {
                   type="submit" 
                   className="btn btn-primary btn-xl" 
                   id="sendMessageButton"
-                  onClick={() => console.log(emailAddress + ": " + message)}
+                  onClick={() => alert(`address: ${emailAddress}, message: ${message}`)}
                 >
                   <FontAwesomeIcon icon={faPaperPlane} />
                 </button>
