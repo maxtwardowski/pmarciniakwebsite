@@ -14,7 +14,7 @@ const Masthead = () => (
         </div>
         <div className="divider-custom-line"></div>
       </div>
-      <p className="masthead-subheading font-weight-light mb-0">Lodz Univerity of Technology</p>
+      <p className="masthead-subheading font-weight-light mb-0">Lodz University of Technology</p>
     </div>
   </header>
 )

@@ -1,10 +1,23 @@
 import * as React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faStar, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
+import {CircularProgress, makeStyles, createStyles, Tooltip} from '@material-ui/core'
+
+const useStyles = makeStyles(theme => 
+  createStyles({
+    progressCircle: {
+      color: 'white',
+      margin: theme.spacing(0),
+      padding: theme.spacing(0),
+    },
+  })
+)
 
 const Contact = () => {
+  const classes = useStyles()
   const [emailAddress, setEmailAddress] = React.useState('')
   const [message, setMessage] = React.useState('')
+  const [messageSent, setMessageSent] = React.useState(false)
 
   return (
     <section className="page-section" id="contact">
@@ -53,11 +66,18 @@ const Contact = () => {
                 <div style={{flexGrow: 1}}/>
                 <button 
                   type="submit" 
-                  className="btn btn-primary btn-xl" 
+                  className="btn btn-primary" 
                   id="sendMessageButton"
-                  onClick={() => alert(`address: ${emailAddress}, message: ${message}`)}
+                  onClick={() => setMessageSent(true)}
+                  style={{width: 70, height: 70}}
                 >
-                  <FontAwesomeIcon icon={faPaperPlane} />
+                  {messageSent ? (
+                    <CircularProgress size={30} className={classes.progressCircle} />
+                  ) : (
+                    <Tooltip title="Send">
+                      <FontAwesomeIcon icon={faPaperPlane} />
+                    </Tooltip>
+                  )}
                 </button>
               </div>
             </form>
