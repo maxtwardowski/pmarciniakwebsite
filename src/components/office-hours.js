@@ -13,8 +13,8 @@ const OfficeHours = () => (
         </div>
         <div className="divider-custom-line"></div>
       </div>
-      <div class="row justify-content-md-center">
-        <div class="col-sm-8">
+      <div className="row justify-content-md-center">
+        <div className="col-sm-8">
           <h4 className="page-section-heading text-center text-uppercase text-white mb-0">
           <span style={{fontSize: 40}}>Mondays: </span><span style={{fontSize: 20}}>10:15-11:00<span style={{fontSize: 10}}>AM</span> room 303 CTI building</span><br/>
           <span style={{fontSize: 40}}>Tuesdays: </span><span style={{fontSize: 20}}>10:15-11:00<span style={{fontSize: 10}}>AM</span> room 301 CTI building</span><br/>

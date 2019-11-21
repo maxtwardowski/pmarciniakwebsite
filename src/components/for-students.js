@@ -20,9 +20,9 @@ const ForStudents = () => (
         </div>
         <div className="divider-custom-line"></div>
       </div>
-      <div class="row justify-content-md-center">
-        <div class="col-sm-8">
-          <p class="lead" style={{textAlign: 'justify'}}>
+      <div className="row justify-content-md-center">
+        <div className="col-sm-8">
+          <p className="lead" style={{textAlign: 'justify'}}>
             {message}
           </p>
         </div>

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faStar, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
-import {CircularProgress, makeStyles, createStyles, Tooltip} from '@material-ui/core'
+import {CircularProgress, makeStyles, createStyles, Tooltip, TextField} from '@material-ui/core'
 
 const useStyles = makeStyles(theme => 
   createStyles({
@@ -33,43 +33,32 @@ const Contact = () => {
         <div className="row">
           <div className="col-lg-8 mx-auto">
             <form name="sentMessage" id="contactForm">
-              <div className="control-group">
-                <div className="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Email address</label>
-                  <input 
-                    className="form-control" 
-                    id="email" 
-                    type="email" 
-                    placeholder="Email Address" 
-                    required="required" 
-                    data-validation-required-message="Please enter your email address." 
-                    onChange={e => setEmailAddress(e.target.value)}
-                  />
-                </div>
-              </div>
-              <div className="control-group">
-                <div className="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Message</label>
-                  <textarea 
-                    className="form-control" 
-                    id="message" 
-                    rows="5" 
-                    placeholder="Message" 
-                    required="required" 
-                    data-validation-required-message="Please enter a message."
-                    onChange={e => setMessage(e.target.value)}
-                  />
-                </div>
-              </div>
-              <br />
+              <TextField
+                label="Email address"
+                margin="normal"
+                variant="filled"
+                fullWidth
+                color="secondary"
+              />
+              <TextField
+                label="Message"
+                margin="normal"
+                variant="filled"
+                fullWidth
+                color="secondary"
+                multiline
+                rows="8"
+              />
               <div className="form-group" style={{display: 'flex'}}>
                 <div style={{flexGrow: 1}}/>
                 <button 
-                  type="submit" 
                   className="btn btn-primary" 
                   id="sendMessageButton"
-                  onClick={() => setMessageSent(true)}
-                  style={{width: 70, height: 70}}
+                  onClick={e => {
+                    e.preventDefault()
+                    setMessageSent(true)
+                  }}
+                  style={{width: 80, height: 60}}
                 >
                   {messageSent ? (
                     <CircularProgress size={30} className={classes.progressCircle} />
